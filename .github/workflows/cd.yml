@@ -7,7 +7,7 @@ on:
 
 env:
   AWS_REGION: us-east-1                   
-  ECR_REPOSITORY: tweteroo
+  ECR_REPOSITORY: u5j0u6f3/tweteroo
   # ECS_SERVICE: MY_ECS_SERVICE
   # ECS_CLUSTER: MY_ECS_CLUSTER
   # ECS_TASK_DEFINITION: MY_ECS_TASK_DEFINITION
