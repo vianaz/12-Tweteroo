@@ -8,9 +8,9 @@ on:
 env:
   AWS_REGION: us-east-1       
   ECR_REPOSITORY: u5j0u6f3/tweteroo         
-  # ECS_SERVICE: MY_ECS_SERVICE
-  # ECS_CLUSTER: MY_ECS_CLUSTER
-  ECS_TASK_DEFINITION: ./task-definition.json
+  ECS_SERVICE: tweteroo
+  ECS_CLUSTER: vianaz
+  ECS_TASK_DEFINITION: .aws/task-definition.json
   CONTAINER_NAME: tweteroo
 
 jobs:
@@ -55,10 +55,10 @@ jobs:
           container-name: ${{ env.CONTAINER_NAME }}
           image: ${{ steps.build-image.outputs.image }}
 
-      # - name: Deploy Amazon ECS task definition
-      #   uses: aws-actions/amazon-ecs-deploy-task-definition@df9643053eda01f169e64a0e60233aacca83799a
-      #   with:
-      #     task-definition: ${{ steps.task-def.outputs.task-definition }}
-      #     service: ${{ env.ECS_SERVICE }}
-      #     cluster: ${{ env.ECS_CLUSTER }}
-      #     wait-for-service-stability: true
+      - name: Deploy Amazon ECS task definition
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+        with:
+          task-definition: ${{ steps.task-def.outputs.task-definition }}
+          service: ${{ env.ECS_SERVICE }}
+          cluster: ${{ env.ECS_CLUSTER }}
+          wait-for-service-stability: true
