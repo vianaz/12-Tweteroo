@@ -11,7 +11,7 @@ env:
   ECS_SERVICE: tweteroo
   ECS_CLUSTER: vianaz
   ECS_TASK_DEFINITION: .aws/task-definition.json
-  CONTAINER_NAME: tweteroo
+  CONTAINER_NAME: api
 
 jobs:
   deploy:
