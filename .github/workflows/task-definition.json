@@ -1,0 +1,9 @@
+{
+    "$schema": "https://ecs-intellisense.s3-us-west-2.amazonaws.com/task-definition/schema.json",
+    "cpu": "128",
+    "family": "fargate-task-definition",
+    "memory": "512",
+    "requiresCompatibilities": [ 
+        "FARGATE" 
+     ]
+ }
