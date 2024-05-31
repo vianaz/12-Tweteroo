@@ -10,7 +10,7 @@ env:
   ECR_REPOSITORY: u5j0u6f3/tweteroo         
   # ECS_SERVICE: MY_ECS_SERVICE
   # ECS_CLUSTER: MY_ECS_CLUSTER
-  ECS_TASK_DEFINITION: task-definition.json
+  ECS_TASK_DEFINITION: ./task-definition.json
   CONTAINER_NAME: tweteroo
 
 jobs:
